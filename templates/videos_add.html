@@ -1,0 +1,11 @@
+<div style="width:670px; float:left;">
+<form action="./index.php?site=videos&action=save" method="post" enctype="multipart/form-data" name="save">
+<table width="100%" cellspacing="1" cellpadding="2" align="left">
+	<tr><h2 colspan="2">Add video</h2></tr>
+    <tr><td>Title:</td><td><input type="text" name="name"></td></tr>
+    <tr><td>Category:</td><td><select name="rubric">$rubrics</select></td></tr>
+    <tr><td>Discription:</td><td><textarea name="description" cols="59" rows="7"></textarea></td></tr>
+    <tr><td>Youtube-ID:</td><td><input name="clip" type="text" value="" size="62"></td></tr>
+    <tr><td><input type="submit" value="save" name="save"></td><td></td></tr>
+</table>
+</form></div>

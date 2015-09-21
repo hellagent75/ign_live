@@ -1,0 +1,32 @@
+<script language="JavaScript" type="text/javascript">
+<!--
+function chkFormular() {
+	if(document.getElementById('message').value == "") {
+		alert("You have to enter a message!");
+		document.getElementById('message').focus();
+   		return false;
+	}
+}
+-->
+</script>
+
+<form method="post" action="messenger.php" id="post" name="post" onsubmit="return chkFormular()">
+<div id="mail-box">
+  <div id="mail-box-header">
+    <h1>Mail » Reply</h1>
+    <ul>
+      <li><a href="mail/">Inbox</a></li>
+      <li><a href="mail/outbox/">Outbox</a></li>
+      <li><a href="javascript:{}" class="active">Write message</a></li>
+    </ul>
+  </div>
+  <div id="mail-box-content">
+    <br />Subject<br /><br />
+    <input type="text" name="title" size="60" value="$title" /><br /><br />
+    Message<br /><br />
+    <textarea name="message" id="message" cols="35" rows="10" style="width:618px; max-width:618px;">$message</textarea><br /><br />
+    <input type="hidden" name="id" value="$replytouser" />
+    <input name="reply" type="submit" value="%send_message%" />
+  </div>
+</div>
+</form>

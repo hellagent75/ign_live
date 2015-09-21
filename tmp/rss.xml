@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+                <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+                  <channel>
+                    <title>webSPELL v4 News Feed</title>
+                    <link>http://localhost/Clients/red_template/Code</link>
+                    <atom:link href="http://localhost/Clients/red_template/Code/tmp/rss.xml" rel="self" type="application/rss+xml" />
+                    <description>Latest news from http://localhost/Clients/red_template/Code</description>
+                    <language>uk-uk</language>
+                    <pubDate>Tue, 13 Jan 2015 07:58:12 +0000</pubDate>
+                    <item>
+	                       <title>dsadasd</title>
+	                       <description><![CDATA[asdsadasdasdsada]]></description>
+	                       <author>sales@shamedia.net (Mark Wahlberg)</author>
+	                       <guid><![CDATA[http://localhost/Clients/red_template/Code/news/36/]]></guid>
+	                       <link><![CDATA[http://localhost/Clients/red_template/Code/news/36/]]></link>
+	                     </item>
+	  			            <item>
+	                       <title>sed quia non numquam eius modi tempora</title>
+	                       <description><![CDATA[Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem qu[...]]]></description>
+	                       <author>sales@shamedia.net (Mark Wahlberg)</author>
+	                       <guid><![CDATA[http://localhost/Clients/red_template/Code/news/5/]]></guid>
+	                       <link><![CDATA[http://localhost/Clients/red_template/Code/news/5/]]></link>
+	                     </item>
+	  			            <item>
+	                       <title>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut voluptatem quia</title>
+	                       <description><![CDATA[Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem qu[...]]]></description>
+	                       <author>sales@shamedia.net (Mark Wahlberg)</author>
+	                       <guid><![CDATA[http://localhost/Clients/red_template/Code/news/2/]]></guid>
+	                       <link><![CDATA[http://localhost/Clients/red_template/Code/news/2/]]></link>
+	                     </item>
+	  			            <item>
+	                       <title>Welcome to our new website</title>
+	                       <description><![CDATA[Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem qu[...]]]></description>
+	                       <author>sales@shamedia.net (Mark Wahlberg)</author>
+	                       <guid><![CDATA[http://localhost/Clients/red_template/Code/news/1/]]></guid>
+	                       <link><![CDATA[http://localhost/Clients/red_template/Code/news/1/]]></link>
+	                     </item>
+	  			            </channel>
+                 </rss>

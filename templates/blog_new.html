@@ -1,0 +1,67 @@
+<script language="JavaScript" type="text/javascript">
+<!--
+function chkFormular() {
+	if(document.post.headline.value == "") {
+		alert("%enter_title%");
+		document.post.headline.focus();
+   		return false;
+	}
+	
+	if(document.post.message.value == "") {
+		alert("%enter_text%");
+		document.post.message.focus();
+   		return false;
+	}
+
+}
+-->
+</script>
+<script language="JavaScript" type="text/JavaScript">
+<!--
+function MM_openBrWindow(theURL,winName,features) { //v2.0
+  window.open(theURL,winName,features);
+}
+</script>
+<link href="styles/layout.css" rel="stylesheet" type="text/css" />
+<style type="text/css">
+
+/* Wrappers */
+#wrappersa { background: #1d1d1d; width: 638px; box-shadow: 0 0 7px #080808; border-radius: 3px; float: left; padding-left:10px; }
+
+</style>
+
+<form method="post" name="post" action="index.php?site=blog" enctype="multipart/form-data" onSubmit="return chkFormular()">
+<div id="wrappersa">
+ <table width="100%" border="0" cellpadding="2" cellspacing="1" >
+  <tr> 
+   <td align="center" >%add_entry% </td>
+  </tr>
+  <tr> 
+   <td></td>
+  </tr>
+  <tr> 
+   <td bgcolor="">
+    <table width="100%" border="0" align="center" cellpadding="2" cellspacing="0">
+     <tr> 
+      <td><strong>%title%</strong></td>
+      <td>
+        <input name="headline" type="text" id="headline" /> 
+      </td>
+     </tr>
+      <td colspan="2"><strong>%text%</strong><br />$addbbcode
+        <textarea name="message" rows="20" cols="100"></textarea></td>
+     </tr>
+     <tr>
+	   <td colspan="2"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td width="4%"><input type="hidden" name="userID" value="$userID"></td>
+    <td width="21%"><select name="comments">$comments</select></td>
+    <td width="75%"><input type="submit" name="save" value="%save%" /></td>
+  </tr>
+</table>
+</td>
+	 </tr> 
+    </table>
+   </td>
+  </tr>
+ </table></div></form>

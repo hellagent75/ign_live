@@ -1,0 +1,131 @@
+      <form method="post" name="post" action="register/">
+      $showerror
+      <div id="box-register">
+        <div id="box-register-header">
+          <h1>Create Account</h1>
+          <ul>
+            <li><a href="login/">Login</a></li>
+            <li><a href="lostpassword/">Lost Password?</a></li>
+          </ul>
+        </div>
+        <div id="box-register-content">
+          <ul>
+            <li>
+              <span class="option">Nickname</span>
+              <input type="text" name="username" value="$username" onkeyup="valid(this)" /><br />
+              <script type="text/JavaScript">
+			    function valid(f) {
+					f.value = f.value.replace(/[^a-z\_\-\u00D1\u00F10-9]*/ig,'');
+				}
+              </script>
+              <span class="info">Minimum 2 characters. This is your Phantoms ID aswell as your login. Only Numbers Letters and _ - are allowed.</span>
+            </li>
+            <li>
+              <span class="option">E-Mail</span>
+              <input type="text" name="mail" value="$mail" /><br />
+              <span class="info">Make sure this is your valid email address i.e. nick@site.com! To complete registration this email address will be verified.</span>
+            </li>
+            <li>
+              <span class="option">First Name</span>
+              <input type="text" name="firstname" value="$firstname"  maxlength="30" />
+            </li>
+            <li>
+              <span class="option">Last Name</span>
+              <input type="text" name="lastname" value="$lastname"  maxlength="30" />
+            </li>
+            <li>
+              <span class="option">Password</span>
+              <input type="password" name="pwd1" value="$pwd1" />
+            </li>
+            <li>
+              <span class="option">Confirm Password</span>
+              <input type="password" name="pwd2" value="$pwd2" />
+            </li>
+            <li>
+              <span class="option">Gender</span>
+              <select name="sex" style="cursor: pointer;">$sex</select>
+            </li>
+            <li>
+              <span class="option">Date of Birth (day-month-year)</span>
+              <input type="text" name="b_day" id="b_day" value="$b_day" maxlength="2" style="width:60px; margin:4px 13px 0px 0px;" />
+              <input type="text" name="b_month" id="b_month" value="$b_month" maxlength="2" style="width:60px; margin:4px 13px 0px 0px;" />
+               <input type="text" name="b_year" id="b_year" value="$b_year" maxlength="4" style="width:80px;" />
+            </li>
+            <li>
+              <span class="option">Country</span><br />
+              <select name="country" style="cursor: pointer;">$countries</select>
+            </li>
+            <li>
+              <span class="option">Verification</span><br />
+              $captcha<input type="text" name="captcha" style="width:143px;" /><input name="captcha_hash" type="hidden" value="$hash" />
+            </li>
+          </ul>
+          <div class="agreement">
+          <b>Terms of Agreement &amp; Privacy Policy</b><br /><br />
+          <textarea readonly="readonly">
+TERMS OF AGREEMENT
+
+This agreement applies to the web site located at www.phantoms-esports.com.
+
+1- By using this site, you agree to the terms written here.
+2- These terms may change. We will then notify you of any the changes. 
+3- A member found breaking these terms will have his account shut down.
+4- We will do our best to make your visit here at Phantoms ESports as good as possible. However, we cannot always foresee or anticipate technical or other difficulties.
+5- No Online Materials may be copied, reproduced, republished, downloaded, posted, transmitted, or distributed in any way, or otherwise used for any purpose, without the prior written permission of their respective owners. You may not add, delete, distort, or otherwise modify the content on this site without permission. Any unauthorized attempt to modify any Online Material, to defeat security features, or to utilize this site for other than its intended purposes is prohibited.
+6- You are licensing to Phantoms ESports  any content you provide through or to the Phantoms ESports  site and the service we offer. Phantoms ESports  may modify, display, distribute and create new material using such content on Phantoms ESports for the promotion and marketing of our services and the operation of our system.
+7- Phantoms ID accounts are personal. You are not allowed to let anyone else use your account at any time. If this happens we will terminate your account immediately.
+
+PRIVACY POLICY
+
+This agreement applies to the web site located at www.phantoms-esports.com.
+
+Data collection
+
+1- Phantoms ESports and some other services do not require any personally identifying information.
+2- Phantoms ESports collects limited non-personally identifying information your browser makes available whenever you visit a website. This log information includes your Internet Protocol address, browser type, browser language, the date and time of your query and one or more cookies that may uniquely identify your browser. We use this information to operate, develop and improve our services.
+3- Upon your first visit to Phantoms ESports, a cookie is sent to your computer that uniquely identifies your browser. A "cookie" is a small file containing a string of characters that is sent to your computer when you visit a website. We use cookies to improve the quality of our service and to better understand how people interact with us. Phantoms ESports does this by storing user preferences in cookies and by tracking user trends and patterns of how people search. Most browsers are initially set up to accept cookies. You can reset your browser to refuse all cookies or to indicate when a cookie is being sent. However, some Phantoms ESports features or services may not function properly without cookies.
+
+Information sharing
+
+1- We do not rent or sell your personally identifying information to other companies or individuals, unless we have your consent. We may share such information in any of the following limited circumstances:
+    1- We have your consent.
+    2- We provide such information to trusted businesses or persons for the sole purpose of processing personally identifying information on our behalf. When this is done, it is subject to agreements that oblige those parties to process such                            information only on our instructions and in compliance with this Privacy Policy and appropriate confidentiality and security measures.
+    3- We conclude that we are required by law or have a good faith belief that access, preservation or disclosure of such information is reasonably necessary to protect the rights, property or safety of Phantoms ESports, its users or the public.
+2- If you have an account, we may share the information submitted under your account among all of our services in order to provide you with a seamless experience and to improve the quality of our services. We will not disclose your account information to other people or non-affiliated companies, except in the limited circumstances described in this Policy or with your consent.
+3- We may store and process personal information collected on our site in Germany or any other country in which Phantoms ESports or its agents maintain facilities. By using our services, you consent to the transfer of your information among these facilities, including those located outside your country.
+4- In the event of a transfer of ownership of Phantoms ESports, such as acquisition by or merger with another company, we will provide notice before any personally identifying information is transferred and becomes subject to a different privacy policy.
+5- We may share aggregated information with others. Examples of this include the number of users who searched for "phantoms" or how many users clicked on a particular advertisement.
+
+Information security
+
+1- We take appropriate security measures to protect against unauthorized access to or unauthorized alteration, disclosure or destruction of data.
+2- We restrict access to your personally identifying information to employees who need to know that information in order to operate, develop or improve our services.
+
+Updating your information
+
+3- We provide mechanisms for updating and correcting your personally identifying information for many of our services. For more information, please see the help pages for each service.
+
+Changes to this Policy
+
+Please note this Privacy Policy will change from time to time. We expect most such changes to be minor, but there may be changes that are more significant. Regardless, we will post those changes on this page and, if the changes are significant, we will also provide a more prominent notice.
+
+If you have any additional questions, please feel free to contact us any time.
+          </textarea>
+          <input type="checkbox" name="terms" id="register-terms" value="true" onclick="codename()" style="cursor:pointer;" /> <label for="register-terms" style="cursor:pointer;">I agree to the Terms of Use and Privacy Policy.</label><br /><br />
+          <input name="save" type="submit" class="button" value="Create Account at Phantoms-Esports.com" disabled="disabled" />
+          </div>
+          <script type="text/javascript">
+	    function codename() {
+			if(document.post.terms.checked)
+		{
+			document.post.save.disabled=false;
+			}
+			else
+		{
+			document.post.save.disabled=true;
+			}
+		}
+      </script>
+        </div>
+      </div>
+      </form>

@@ -1,0 +1,24 @@
+@charset "utf-8";
+*{margin: 0px; padding: 0px; border:0px; outline: 0px; }
+body {background:url(../sm/background/background.jpg) center top no-repeat,url(../sm/background/background_repeat.png) repeat; font-family:Tahoma, Geneva, sans-serif; font-size:12px; color:#ccc; margin:0;}
+a, a:link, a:visited {color:#fff; text-decoration: none; font-family: Tahoma, Geneva, sans-serif; -webkit-transition: all 0.3s ease-in ; -moz-transition: all 0.3s ease-in ; -ms-transition: all 0.3s ease-in ; -o-transition: all 0.3s ease-in ; transition: all 0.3s ease-in ; }
+a:hover { color:#BFA2A2; }
+
+input {border:1px solid #000; box-shadow:inset 0px 0px 3px #000000; background:rgba(0,0,0,0.4); border-radius:3px; color:#999; padding:4px 6px; margin:10px 0 0 6px; font:12px;}
+
+input[type=text] { width: 176px; box-shadow:none; color:#EEE; font-family:'Titillium Web'; display:inline-block; padding:4px 6px; margin:10px 0 0 6px; font:12px;}
+input[type=password] { width: 176px; box-shadow:none; color:#EEE; font-family:'Titillium Web';display:inline-block; padding:4px 6px; margin:10px 0 0 6px; font:12px;}
+input[type=submit], input[type=button] { width:150px;background:#9E1109; box-shadow:none; color:#EEE; font-family:'Titillium Web'; cursor:pointer; display:inline-block; padding:4px 6px; margin:10px 0 0 6px; font:12px; border:1px solid #9E1109;}
+.log { width: 189px; }
+
+#wrapper {width:1000px; margin:150px auto;}
+
+.logo {width:350px; float:left;}
+
+#login_area {float:left; width:650px; float:left;}
+#login_response {width:178px; padding:6px; background:#0B0C0D; border-radius:2px; border:2px #8b2222 solid; margin:3px 0px 3px 0px; float:left;}
+#reason {width:1000px; padding:10px; margin-top:50px; float:left;
+border:1px solid #000; box-shadow:inset 0px 0px 3px #000000; background:rgba(0,0,0,0.4); border-radius:3px;
+}
+#logged_bg {background:url(../sm/core/bg_locked.png) no-repeat top center #785785; width:190px; border:2px #333 solid; border-radius:2px; padding:155px 5px 3px 5px; margin:10% auto 0 auto;}
+#logged_area {background:url(../sm/logo_2.png) no-repeat top center #785785; width:190px; border:2px #333 solid; border-radius:2px; padding:155px 5px 3px 5px; margin:10% auto 0 auto;}

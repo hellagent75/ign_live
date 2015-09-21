@@ -1,0 +1,165 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta name="description" content="Clanpage using webSPELL 4 CMS" />
+	<meta name="author" content="webspell.org" />
+	<meta name="keywords" content="webspell, webspell4, clan, cms" />
+	<meta name="copyright" content="Copyright &copy; 2005 - 2011 by webspell.org" />
+	<meta name="generator" content="webSPELL" />
+
+<!-- Head & Title include -->
+	<title>Article</title>
+	<link href="_stylesheet.css" rel="stylesheet" type="text/css" />
+	<script src="js/bbcode.js" language="jscript" type="text/javascript"></script>
+<!-- end Head & Title include -->
+<script language="JavaScript" type="text/javascript">
+<!--
+
+message = new Array();
+
+function chkFormular() {
+	if(document.getElementById('article_title').value == "") {
+		alert("%enter_title%");
+		document.post.title.focus();
+   		return false;
+	}
+	if(message[0] == "" || typeof message[0] == undefined) {
+		alert("%enter_text%");
+   		return false;
+	}
+	message_text = '';
+	x = 0;
+	while(true){
+		if(message[x]){
+			message_text += message[x];
+			x++;
+		}
+		else{
+			break;
+		}
+	}
+	if(!validbbcode(message_text)){
+		return false;
+	}
+	
+}
+
+function update_textarea(value) {
+	document.getElementById('articles_textarea').innerHTML='';
+	for(i=0;i<value;++i) {
+		if(message[i]) document.getElementById('articles_textarea').innerHTML+='%page% '+(i + 1)+'<br /><textarea name="message['+i+']" rows="20" cols="130" style="width: 750px;" onfocus="textarea = \'message[' + i + ']\';" onblur="message['+i+']=this.value;" onchange="message['+i+']=this.value;">'+message[i]+'</textarea><br/><br/>';
+		else document.getElementById('articles_textarea').innerHTML+='%page% '+(i + 1)+'<br /><textarea name="message['+i+']" rows="20" cols="130" style="width: 750px;" onfocus="textarea = \'message[' + i + ']\';" onblur="message['+i+']=this.value;" onchange="message['+i+']=this.value;"></textarea><br/><br/>';
+	}
+}
+
+$message_vars
+
+-->
+</script>
+<style type="text/css">
+* { margin: 0px; padding: 0px; outline: none; }
+html, body { background: #0c0d0f; font-family: Tahoma, Geneva, sans-serif; font-size: 12px; color: #fff; }
+html { padding: 15px; }
+
+/* Links */
+a, a:link, a:visited { color: #fff; text-decoration: none; font-family: Tahoma, Geneva, sans-serif; -webkit-transition: all 0.3s ease-in ; -moz-transition: all 0.3s ease-in ; -ms-transition: all 0.3s ease-in ; -o-transition: all 0.3s ease-in ; transition: all 0.3s ease-in ; }
+a:hover { color: #f26722; }
+
+/* Resets */
+::selection { background: #999; color: #fff; text-shadow: none; }
+ul { list-style: none; }
+li { list-style: none; }
+
+::-webkit-scrollbar { width: 12px; }
+::-webkit-scrollbar-track-piece { background: #222; }
+::-webkit-scrollbar-thumb { background: #666; border-radius: 3px; border: 1px #222 solid; -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5); }
+::-webkit-scrollbar-corner { display: none; }
+::-webkit-resizer { display: none; }
+
+/* Forms */
+form { border: none; margin: 0px; padding: 0px; }
+input { border: none; font-size: 12px; font-family: Tahoma, Geneva, sans-serif; background: #222222; border-radius: 2px; -moz-border-radius: 2px; -webkit-border-radius: 2px; color: #999999; padding: 5px 7px 5px 7px; color: #999;  border: 1px #302f2f solid; margin: 3px 0px 3px 0px; }
+input[type=submit], input[type=button] { border: none; font-size: 12px; font-family: Tahoma, Geneva, sans-serif; background: #343434; border-radius: 2px; -moz-border-radius: 2px; -webkit-border-radius: 2px; color: #999999; padding: 5px 7px 5px 7px; color: #fff; box-shadow: 0 0 7px #000; margin: 3px 0px 3px 0px; cursor: pointer; }
+input[type=submit], input[type=button]:hover { background: #2B5C8D; }
+select { border: none; font-size: 12px; font-family: Tahoma, Geneva, sans-serif; background: #222222; border-radius: 2px; -moz-border-radius: 2px; -webkit-border-radius: 2px; color: #999999; padding: 5px 7px 5px 7px; color: #999; border: 1px #302f2f solid; margin: 3px 0px 3px 0px; }
+option { border: 0px; }
+textarea { background: #222222; border-radius: 2px; padding: 10px; color: #999; border: 1px #302f2f solid; }
+
+/* Wrappers */
+#wrapper { background: #1d1d1d; width: 100%; box-shadow: 0 0 7px #080808; border-radius: 3px; float: left; }
+
+#header { background:url(sm/core/blue_bg.png); width: 100%; height: 39px; float: left; }
+#header h1 { font-size: 14px; margin: 10px 0px 0px 10px; float: left; }
+
+#content { width: 100%; float: left; }
+#content-inner { width: 96%; margin: 2%; float: left; }
+#content-inner h1 { width: 100%; padding: 0px 0px 2px 0px; margin: 10px 0px 10px 0px; border-bottom: 1px dotted #505050; color: #999; font-size: 14px; float: left; }
+
+#content-inner ul { width: 100%; float: left; }
+#content-inner ul li { width: 33%; float: left; }
+</style>
+</head>
+<body>
+<form action="articles.php?action=save" method="post" id="post" name="post" onsubmit="return chkFormular()">
+
+<div id="wrapper">
+  <div id="header">
+    <h1>ADD article</h1>
+  </div>
+  <div id="content">
+    <div id="content-inner">
+      
+      <ul>
+      
+      <li>%pagecount%<br/><br/>
+      %page_select%<br /><br />
+      </li>
+        
+        <li>
+          Rubric<br /><br />
+          <select name="rubric">$rubrics</select><br /><br />
+        </li>
+     </ul>
+		
+        <li>
+          Title<br /><br />
+          <input name="title" type="text" size="80" value="$title" id='article_title' /><br /><br />
+        </li>
+        
+        <tr align="left">
+        <td colspan="2"><b>Intro:</b><br /><textarea name="intro" rows="10" cols="130" style="width: 750px;">$intro</textarea></td>
+      </tr>
+      
+        
+</div>      
+        
+     
+<div id="articles_textarea">
+        <script language="javascript" type="text/javascript">
+        <!--
+        update_textarea($pages);
+        -->
+        </script></div>
+        
+</div>
+        
+      <div style="margin: 10px 0px 0px 0px;float: left;">
+        <input type="hidden" name="articlesID" value="$articlesID" />
+        <input type="hidden" name="userID" value="$userID" />
+        <select name="comments">
+          <option value="0">%no_comments%</option>
+          <option value="1">%user_comments%</option>
+          <option value="2" selected="selected">%visitor_comments%</option>
+        </select>
+        <input name="save" type="submit" value="%save_article%" />
+        <input name="button" type="button" onclick="window.close()" value="%cancel%" />
+      </div>
+      
+    </div>
+  </div>
+</div>
+
+</form>
+</body>
+</html>

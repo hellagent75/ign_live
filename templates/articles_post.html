@@ -1,0 +1,199 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta name="description" content="Clanpage using webSPELL 4 CMS" />
+	<meta name="author" content="webspell.org" />
+	<meta name="keywords" content="webspell, webspell4, clan, cms" />
+	<meta name="copyright" content="Copyright &copy; 2005 - 2011 by webspell.org" />
+	<meta name="generator" content="webSPELL" />
+
+<!-- Head & Title include -->
+	<title>Add Article</title>
+	<link href="_stylesheet.css" rel="stylesheet" type="text/css" />
+	<script src="js/bbcode.js" language="jscript" type="text/javascript"></script>
+<!-- end Head & Title include -->
+<script language="JavaScript" type="text/javascript">
+<!--
+function chkFormular() {
+	if(document.getElementById('article_title').value == "") {
+		alert("%enter_title%");
+		document.post.title.focus();
+   		return false;
+	}
+	
+	if(message[0] == "" || typeof message[0] == undefined) {
+		alert("%enter_text%");
+   		return false;
+	}
+	message_text = '';
+	x = 0;
+	while(true){
+		if(message[x]){
+			message_text += message[x];
+			x++;
+		}
+		else{
+			break;
+		}
+	}
+	if(!validbbcode(message_text)){
+		return false;
+	}
+	
+}
+
+message = new Array();
+
+function update_textarea(value) {
+	document.getElementById('articles_textarea').innerHTML='';
+	for(i=0;i<value;++i) {
+		if(message[i]) document.getElementById('articles_textarea').innerHTML+='%page% '+(i + 1)+'<br /><textarea name="message[' + i + ']" rows="20" cols="130" style="width: 750px;" onfocus="textarea = \'message[' + i + ']\';" onblur="message['+i+']=this.value;" onchange="message['+i+']=this.value;">'+message[i]+'</textarea><br/><br/>';
+		else {
+			message[i] = '';
+			document.getElementById('articles_textarea').innerHTML+='%page% '+ (i + 1) +'<br /><textarea name="message[' + i + ']" rows="20" cols="130" style="width: 750px;" onfocus="textarea = \'message[' + i + ']\';" onblur="message['+i+']=this.value;" onchange="message['+i+']=this.value;"></textarea><br/><br/>';
+		}
+	}
+}
+
+-->
+</script>
+<style type="text/css">
+* { margin: 0px; padding: 0px; outline: none; }
+html, body { background: #0c0d0f; font-family: Tahoma, Geneva, sans-serif; font-size: 12px; color: #fff; }
+html { padding: 15px; }
+
+/* Links */
+a, a:link, a:visited { color: #fff; text-decoration: none; font-family: Tahoma, Geneva, sans-serif; -webkit-transition: all 0.3s ease-in ; -moz-transition: all 0.3s ease-in ; -ms-transition: all 0.3s ease-in ; -o-transition: all 0.3s ease-in ; transition: all 0.3s ease-in ; }
+a:hover { color: #f26722; }
+
+/* Resets */
+::selection { background: #999; color: #fff; text-shadow: none; }
+ul { list-style: none; }
+li { list-style: none; }
+
+::-webkit-scrollbar { width: 12px; }
+::-webkit-scrollbar-track-piece { background: #222; }
+::-webkit-scrollbar-thumb { background: #666; border-radius: 3px; border: 1px #222 solid; -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5); }
+::-webkit-scrollbar-corner { display: none; }
+::-webkit-resizer { display: none; }
+
+/* Forms */
+form { border: none; margin: 0px; padding: 0px; }
+input { border: none; font-size: 12px; font-family: Tahoma, Geneva, sans-serif; background: #222222; border-radius: 2px; -moz-border-radius: 2px; -webkit-border-radius: 2px; color: #999999; padding: 5px 7px 5px 7px; color: #999;  border: 1px #302f2f solid; margin: 3px 0px 3px 0px; }
+input[type=submit], input[type=button] { border: none; font-size: 12px; font-family: Tahoma, Geneva, sans-serif; background: #343434; border-radius: 2px; -moz-border-radius: 2px; -webkit-border-radius: 2px; color: #999999; padding: 5px 7px 5px 7px; color: #fff; box-shadow: 0 0 7px #000; margin: 3px 0px 3px 0px; cursor: pointer; }
+input[type=submit], input[type=button]:hover { background: #2B5C8D; }
+select { border: none; font-size: 12px; font-family: Tahoma, Geneva, sans-serif; background: #222222; border-radius: 2px; -moz-border-radius: 2px; -webkit-border-radius: 2px; color: #999999; padding: 5px 7px 5px 7px; color: #999; border: 1px #302f2f solid; margin: 3px 0px 3px 0px; }
+option { border: 0px; }
+textarea { background: #222222; border-radius: 2px; padding: 10px; color: #999; border: 1px #302f2f solid; }
+
+/* Wrappers */
+#wrapper { background: #1d1d1d; width: 100%; box-shadow: 0 0 7px #080808; border-radius: 3px; float: left; }
+
+.header {background:url(sm/core/h2_clear.png); width: 100%; height: 39px; float: left; }
+.header h1 {font-size:14px; margin: 10px 0px 0px 10px; float:left; }
+
+#content { width: 100%; float: left; }
+#content-inner { width: 96%; margin: 2%; float: left; }
+#content-inner h1 { width: 100%; padding: 0px 0px 2px 0px; margin: 10px 0px 10px 0px; border-bottom: 1px dotted #505050; color: #999; font-size: 14px; float: left; }
+
+#content-inner ul { width: 100%; float: left; }
+#content-inner ul li { width: 33%; float: left; }
+</style>
+</head>
+<body>
+<form action="articles.php?action=save" method="post" id="post" name="post" onsubmit="return chkFormular()">
+<table width="100%" border="0" cellspacing="0" cellpadding="2" bgcolor="#1d1d1d">
+  <tr>
+    <td class="header" align="center"><h1>ADD Article</h1></td>
+  </tr>
+    <td>
+    <table width="100%" border="0" cellspacing="0" cellpadding="2">
+      <tr align="left">
+        <td colspan="2" align="center"><b>%pagecount%</b>&nbsp;&nbsp;&nbsp;%page_select%<hr /></td>
+      </tr>
+      <tr align="left">
+        <td colspan="2"><b>Rubric:</b> <select name="rubric">$rubrics</select></td>
+      </tr>
+      <tr align="left">
+        <td colspan="2"><b>%title%</b><br /><br />
+        <input name="title" type="text" size="80" id='article_title' /></td>
+      </tr>
+      <tr align="left">
+        <td colspan="2"><b>Intro:</b><br /><textarea name="intro" rows="10" cols="130" style="width: 750px;"></textarea></td>
+      </tr>
+      <tr align="left">
+        <td colspan="2"><br /><div id="articles_textarea">
+        <script language="JavaScript" type="text/javascript">
+        <!--
+        update_textarea(1);
+        -->
+        </script></div></td>
+      </tr>
+      <tr>
+        <td><small><b>%options%:</b> %html% %bbcode% %smilies%</small></td>
+        <td align="right"><input name="upload" type="button" onclick="MM_openBrWindow('upload.php?articlesID=$articlesID','Upload','scrollbars=yes,width=800,height=600')" value="%upload_images%" /></td>
+      </tr>
+      <tr>
+        <td colspan="2"><hr /></td>
+      </tr>
+    </table>
+    <table width="100%" border="0" cellspacing="0" cellpadding="2">
+      <tr>
+        <td>%link% 1:
+        <input name="link1" type="text" />
+        <input name="url1" type="text" value="http://" />
+        <input class="input" name="window1" type="radio" value="1" checked="checked" />
+        %new_window%
+        <input class="input" type="radio" name="window1" value="0" />
+        %self%</td>
+      </tr>
+      <tr>
+        <td>%link% 2:
+        <input name="link2" type="text" />
+        <input name="url2" type="text" value="http://" />
+        <input class="input" name="window2" type="radio" value="1" checked="checked" />
+        %new_window%
+        <input class="input" type="radio" name="window2" value="0" />
+        %self%</td>
+      </tr>
+      <tr>
+        <td>%link% 3:
+        <input name="link3" type="text" />
+        <input name="url3" type="text" value="http://" />
+        <input class="input" name="window3" type="radio" value="1" checked="checked" />
+        %new_window%
+        <input class="input" type="radio" name="window3" value="0" />
+        %self%</td>
+      </tr>
+      <tr>
+        <td>%link% 4:
+        <input name="link4" type="text" />
+        <input name="url4" type="text" value="http://" />
+        <input class="input" name="window4" type="radio" value="1" checked="checked" />
+        %new_window%
+        <input class="input" type="radio" name="window4" value="0" />
+        %self%</td>
+      </tr>
+      <tr>
+        <td><hr /></td>
+      </tr>
+      <tr>
+        <td align="right">
+        <input type="hidden" name="articlesID" value="$articlesID" />
+        <input type="hidden" name="userID" value="$userID" />
+        <select name="comments">
+          <option value="0">%no_comments%</option>
+          <option value="1">%user_comments%</option>
+          <option value="2" selected="selected">%visitor_comments%</option>
+        </select>
+        <input name="save" type="submit" value="%save_article%" />
+        <input name="button" type="button" onclick="window.close()" value="%cancel%" /></td>
+      </tr>
+    </table>
+    </td>
+  </tr>
+</table>
+</form>
+</body>
+</html>

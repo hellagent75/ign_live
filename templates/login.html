@@ -1,0 +1,23 @@
+      <div id="box-login">
+        <div id="box-login-header">
+          <h1>Login</h1>
+          <ul>
+            <li><a href="register/">Create Account</a></li>
+            <li><a href="lostpassword/">Lost Password?</a></li>
+          </ul>
+        </div>
+        <div id="box-login-content">
+          <form method="post" name="login" class="login" id="login_formx" action="sc_checkloginx.php">
+          <ul>
+            <li><input name="ws_user" type="text" value="username" onfocus="if(this.value=='username') this.value='';" onblur="if(this.value=='') { this.value='username'; }" /></li>
+            <li><input name="pwd" type="password" value="password" onfocus="if(this.value=='password') this.value='';" onblur="if(this.value=='') { this.value='password'; }" /></li>
+            <li><input type="submit" name="submit" value="Login" /></li>
+          </ul>
+          <div id="login-errorx" style="display: none;">
+          <img id="loading_imgx" src="gfx/icons/loader.gif" width="16" height="16" style="display:none;" alt="Loading..."/>
+          <span id="login_responsex"></span>
+          </div>
+          </form>
+          <script type="text/javascript" src="js/login-funcx.js"></script>
+        </div>
+      </div>

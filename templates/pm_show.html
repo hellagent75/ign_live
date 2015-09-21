@@ -1,0 +1,22 @@
+<form method="post" action="messenger.php">
+<div id="mail-box">
+  <div id="mail-box-header">
+    <h1>Mail » Read ( $title )</h1>
+    <ul>
+      <li><a href="mail/">Inbox</a></li>
+      <li><a href="mail/outbox/">Outbox</a></li>
+      <li><a href="mail/write/">Write message</a></li>
+    </ul>
+  </div>
+  <div id="mail-box-content">
+    <span>Message recived from $sender on $date</span><br /><br />
+    <span style="background: #181818; width: 618px; border-radius:2px; padding: 10px; float: left;" >$message</span>
+    <br /><br /><br />
+    <input type="hidden" name="quickaction" value="true" />
+    <input type="hidden" name="quickactiontype" value="delete" />
+    <input type="hidden" name="messageID[]" value="$id" />
+    <input type="button" value="%reply%" onclick="MM_goToURL('parent','mail/reply/$id/');return document.MM_returnValue" />
+    <input type="submit" value="%delete%" />
+  </div>
+</div>
+</form>

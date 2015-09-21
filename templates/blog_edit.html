@@ -1,0 +1,59 @@
+<script language="JavaScript" type="text/javascript">
+<!--
+function chkFormular() {
+	if(document.post.headline.value == "") {
+		alert('%enter_title%');
+		document.post.headline.focus();
+   		return false;
+	}
+	
+	if(document.post.message.value == "") {
+		alert('%enter_text%');
+		document.post.message.focus();
+   		return false;
+	}
+
+}
+-->
+</script>
+<script language="JavaScript" type="text/JavaScript">
+<!--
+function MM_openBrWindow(theURL,winName,features) { //v2.0
+  window.open(theURL,winName,features);
+}
+</script>
+<form method="post" name="post" action="index.php?site=blog" enctype="multipart/form-data" onsubmit="return chkFormular()">
+ <table width="100%" border="0" cellpadding="2" cellspacing="1" bgcolor="$border">
+  <tr> 
+   <td class="title" align="center" bgcolor="$bghead">%add_entry%</td>
+  </tr>
+  <tr> 
+   <td bgcolor="$pagebg"></td>
+  </tr>
+  <tr> 
+   <td bgcolor="$bg1">
+    <table width="100%" border="0" align="center" cellpadding="2" cellspacing="0" class="formtable">
+     <tr> 
+      <td><strong>%title%</strong></td>
+      <td>
+        <input name="headline" type="text" id="headline" value="$ds[headline]" />
+      </td>
+     </tr>
+	 <tr> 
+      <td colspan="2"><strong>%text%</strong><br>$addbbcode
+        <textarea name="message" rows="20" cols="100">$msg</textarea></td>
+     </tr>
+	 <tr>
+	   <td colspan="2"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td width="4%"><input type="hidden" name="blogID" value="$blog"></td>
+    <td width="21%"><select name="comments">$comments</select></td>
+    <td width="75%"><input type="submit" name="saveedit" value="%save%" /></td>
+  </tr>
+</table>
+</td>
+	 </tr> 
+    </table>
+   </td>
+  </tr>
+ </table></form>

@@ -1,0 +1,20 @@
+          <h2>Contact</h2>
+
+            <div id="box-about-content">
+              $showerror
+              <form action="contact/" method="post">
+              <input type="hidden" name="action" value="send" />
+              Receiver<br /><br />
+              <select name="getemail">$getemail</select><br /><br />
+              Name<br /><br />
+              <input name="name" value="$name" size="40" /><br /><br />
+              Email<br /><br />
+              <input name="from" value="$from" size="40" /><br /><br />
+              Subject<br /><br />
+              <input name="subject" value="$subject" size="40" /><br /><br />
+              Message<br /><br />
+              <textarea name="text" cols="50" rows="6">$text</textarea><br /><br />
+              <input type="submit" value="%send%" />
+              <input type="reset" value="%reset%" />
+              </form>
+            </div>

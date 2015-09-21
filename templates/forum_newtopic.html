@@ -1,0 +1,54 @@
+<div class="forum_reply">
+<script language="JavaScript" type="text/javascript">
+<!--
+var topic_submit = false;
+function chkFormular() {
+	if(document.getElementById('topicname').value == "") {
+		alert("%enter_topic%");
+		document.getElementById('topicname').focus();
+   		return false;
+	}
+	
+	if(document.getElementById('message').value == "") {
+		alert("%enter_text%");
+		document.getElementById('message').focus();
+   		return false;
+	}
+	if(!validbbcode(document.getElementById('message').value)){
+		return false;
+	}
+	if(topic_submit == true){
+		return false;
+	}
+	topic_submit = true;
+}
+	
+function ChangeFormAction() {
+	if(document.getElementById('preview').checked == true) {
+		document.post.action = "index.php?site=forum&addtopic=true";
+	}
+	else {
+		document.post.action = "forum.php";
+	}
+}
+-->
+</script>
+
+<form action="forum.php" method="post" id="post" name="post" onsubmit="return chkFormular()">
+	<div class="textarea">
+    	<h2>Topic Title</h2>
+		<input name="topicname" type="text" id="topicname" value="$topicname" size="100"/>
+    </div>
+    
+    <div class="textarea">
+    	<h2>Your Message</h2>
+		<textarea name="message" id="message">$message</textarea>
+        %html_off% &#8226; %bbcode_on% <span><input name="newtopic" id="add_topic_submit" type="submit" value="%post_new_topic%" /></span>
+    </div>
+
+	<input type="hidden" name="board" value="$board" />
+    <input type="hidden" name="userID" value="$userID" />
+    <input type="hidden" name="addtopic" value="true" />
+    
+</form>
+</div>

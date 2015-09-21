@@ -1,0 +1,18 @@
+<form action="gallery.php" method="post" name="ws_gallery">
+<div id="pic-edit">
+  <div id="pic-edit-header">
+    <h2>Edit - $name</h2>
+  </div>
+  <div id="pic-edit-content">
+    Name<br /><br />
+    <input name="name" type="text" value="$name" size="55" /><br /><br />
+    Info<br /><br />
+    <textarea name="comment" cols="35" rows="6">$comment</textarea><br /><br />
+    Comments<br /><br />
+    <select name="comments">$comments</select><br /><br />
+    <input type="hidden" name="reset" value="1" />
+    <input type="hidden" name="picID" value="$picID" />
+    <input name="saveedit" type="submit" value="%update_picture%" />
+  </div>
+</div>
+</form>

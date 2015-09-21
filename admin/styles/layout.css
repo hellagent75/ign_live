@@ -1,0 +1,52 @@
+/*
+	Phantoms-esports.com (c) Copyright 2012
+	Author: Tiago Ferreira - www.tiagof.com
+*/
+
+/* Imports */
+* { margin: 0px; padding: 0px; border:0px; outline: 0px; }
+html, body { background: url(../gfx/bg.png); font-family: Tahoma, Geneva, sans-serif; font-size: 12px; color: #fff; }
+
+/* Resets */
+img { border: none; }
+small { font-size: 9px; color: #666666; }
+form { border: none; margin: 0; padding: 0; }
+ul { list-style: none; }
+li { list-style: none; }
+
+.tooltip { color: #fff; background: #0d0e10; padding:5px 10px 5px 10px; margin: 0px 0px -1px 0px; border-radius: 3px; box-shadow: 0 0 7px #000; opacity: 0.9; position:absolute; top: 0; left: 0; display:none;  z-index: 1000; float: left; }
+
+/* Links */
+a, a:link, a:visited { color: #fff; text-decoration: none; font-family: Tahoma, Geneva, sans-serif; -webkit-transition: all 0.3s ease-in ; -moz-transition: all 0.3s ease-in ; -ms-transition: all 0.3s ease-in ; -o-transition: all 0.3s ease-in ; transition: all 0.3s ease-in ; }
+a:hover { color: #CCFFFF; }
+
+/* Forms */
+form { border: none; margin: 0px; padding: 0px; }
+input { border: none; font-size: 12px; font-family: Tahoma, Geneva, sans-serif; background: #222222; border-radius: 2px; -moz-border-radius: 2px; -webkit-border-radius: 2px; color: #999999; padding: 5px 7px 5px 7px; color: #999; box-shadow: 0 0 7px #080808; margin: 3px; }
+input[type=submit], input[type=button] { border: none; font-size: 12px; font-family: Tahoma, Geneva, sans-serif; background: #343434; border-radius: 2px; -moz-border-radius: 2px; -webkit-border-radius: 2px; color: #999999; padding: 5px 7px 5px 7px; color: #fff; box-shadow: 0 0 7px #080808; margin: 3px 0px 3px 0px; cursor: pointer; }
+input[type=submit], input[type=button]:hover { background: #CCFFFF; color:#000; }
+select { border: none; font-size: 12px; font-family: Tahoma, Geneva, sans-serif; background: #222222; border-radius: 2px; -moz-border-radius: 2px; -webkit-border-radius: 2px; color: #999999; padding: 5px 7px 5px 7px; color: #999; box-shadow: 0 0 7px #080808; margin: 3px 0px 3px 0px; }
+option { border: 0px; }
+textarea { background: #222222; border-radius: 2px; padding: 10px; color: #999; box-shadow: 0 0 7px #000; }
+
+/* Wrappers */
+#wrapper { width:1000px; margin:auto; }
+#logo { background: url(../gfx/logo.png) center center no-repeat; width:309px; height:75px; margin:20px; float:left; }
+#wrapper-inner { background: url(../gfx/content.png); width:1000px; border:2px #667480 solid; border-radius:3px; margin:0px 0px 20px 0px; float:left;}
+#inner-left { width:215px; float:left; padding-right:9px; }
+#inner-right { width: 770px; border-top-right-radius: 6px; border-bottom-right-radius: 6px; float:left; overflow:hidden;}
+#inner-right h1 { background: url(../gfx/right-h1.png); width:770px; height: 38px; line-height:36px; border-radius: 3px; margin: 8px 0px 10px 0px; color: #999; font-size: 16px; float: right; text-indent:10px; float:right;}
+
+/* Left */
+#menu { background: #0e0e0e; border-top: 1px #292929 solid; width: 205px; border-bottom-left-radius: 10px; padding: 0px 5px 5px 5px; float: left; }
+#menu h1 { background: url(../gfx/menu-h1.png); width: 200px; height: 22px; border-radius: 3px; font-size: 12px; padding: 5px 0px 0px 5px; margin: 5px 0px 0px 0px; color: #999; float: left; text-transform:uppercase; }
+#menu ul { width: 200px; margin: 5px 0px 0px 0px; float: left; }
+#menu ul li { width: 200px; margin: 0px 0px 5px 0px; float: left; }
+#menu ul li a { background: #191919; width: 187px; height: 15px; border-radius: 3px; padding: 5px; margin: 0px 0px 0px 4px; float: left; }
+
+/* Webspell */
+table { background: none; border: none; border-radius: 3px; float:left;  }
+td.title { background: url(../gfx/tablebg.png); padding: 10px; border-radius: 3px; margin: 0px 0px 3px 0px; }
+.td_head { height: 10px; background-color: #232323; padding: 10px; border-radius: 3px; }
+.td1 { height: 10px; background-color: #202020; padding: 10px; border-radius: 3px; }
+.td2 { height: 10px; background-color: #202020; padding: 10px; border-radius: 3px; }

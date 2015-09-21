@@ -1,0 +1,222 @@
+RewriteEngine on
+
+DirectoryIndex index.html index.php
+
+
+
+Options +FollowSymlinks
+
+RewriteCond %{HTTP_HOST} ^www\.localhost/SM_Templates/old/ [NC]
+
+RewriteRule ^(.*) localhost/SM_Templates/old/$1 [L,R=301]
+
+
+# TV
+
+RewriteRule ^tv/?$ tv.html [L]
+RewriteRule ^tv/pt/?$ tv_pt.html [L]
+
+
+# Albums
+
+RewriteRule ^albums/?$ index.php?site=gallery&groupID=1 [L]
+
+RewriteRule ^album/([0-9]+)/?$ index.php?site=gallery&galleryID=$1 [L]
+
+RewriteRule ^album/([0-9]+)/page/([0-9]+)/?$ index.php?site=gallery&galleryID=$1&page=$2 [L]
+
+RewriteRule ^pic/([0-9]+)/?$ index.php?site=gallery&picID=$1 [L]
+
+RewriteRule ^pic/edit/([0-9]+)/?$ index.php?site=gallery&action=edit&id=$1 [L]
+
+
+
+# News
+
+RewriteRule ^news/?$ index.php?site=news&category=news [L]
+
+RewriteRule ^news/unpublished/?$ index.php?site=news&action=unpublished [L]
+
+RewriteRule ^news/archive/page/([0-9]+)/?$ index.php?site=news&action=archive&category=news&page=$1 [L]
+
+RewriteRule ^news/archive/?$ index.php?site=news&action=archive&category=news [L]
+
+RewriteRule ^news/([0-9]+)/?$ index.php?site=news_comments&newsID=$1&category=news [L]
+
+RewriteRule ^news/([0-9]+)/page/([0-9]+)/?$ index.php?site=news_comments&newsID=$1&sorttype=ASC&commentspage=$2 [L]
+
+
+
+
+
+# Articles
+
+RewriteRule ^articles/?$ index.php?site=articles [L]
+
+RewriteRule ^articles/page/([0-9]+)/?$ index.php?site=articles&sort=date&type=DESC&page=$1
+
+RewriteRule ^article/([0-9]+)/?$ index.php?site=articles&action=show&articlesID=$1 [L]
+
+RewriteRule ^article/([0-9]+)/page/([0-9]+)/?$ index.php?site=articles&action=show&articlesID=$1&sorttype=ASC&commentspage=$2 [L]
+
+
+
+# Comments
+
+RewriteRule ^comment/edit/([0-9]+)/ref=([a-zA-Z0-9-/]+)/?$ index.php?site=comments&editcomment=true&id=$1&ref=$2 [L]
+
+
+
+# Profile
+
+RewriteRule ^user/([a-zA-Z0-9-_]+)/?$ index.php?site=profile&username=$1 [L]
+
+RewriteRule ^user/([a-zA-Z0-9-_]+)/page/([0-9]+)/?$ index.php?site=profile&username=$1&action=guestbook&type=DESC&page=$2 [L]
+
+
+
+RewriteRule ^user/([a-zA-Z0-9-_]+)/gbook/delect/?$ index.php?site=profile&username=$1&action=guestbook&delete=true [L]
+
+RewriteRule ^user/([a-zA-Z0-9-_]+)/gbook/add/?$ index.php?site=profile&action=guestbook&username=$1
+
+
+
+RewriteRule ^friends/?$ index.php?site=buddys
+
+RewriteRule ^friend/add/([0-9]+)/([0-9]+)/?$ buddys.php?action=add&id=$1&userID=$2 [L]
+
+RewriteRule ^friend/remove/([0-9]+)/([0-9]+)/?$ buddys.php?action=delete&id=$1&userID=$2 [L]
+
+
+
+RewriteRule ^register/?$ index.php?site=register [L]
+
+RewriteRule ^register/key/([a-zA-Z0-9-_]+)/?$ index.php?site=register&key=$1 [L]
+
+RewriteRule ^login/?$ index.php?site=login [L]
+
+RewriteRule ^lostpassword/?$ index.php?site=lostpassword [L]
+
+
+
+# User Panel
+
+RewriteRule ^settings/?$ index.php?site=myprofile [L]
+
+
+
+RewriteRule ^logout/?$ logout.php [L]
+
+
+
+# Mail
+
+RewriteRule ^mail/?$ index.php?site=messenger [L]
+
+RewriteRule ^mail/inbox/page/([0-9]+)/?$ index.php?site=messenger&action=incoming&sort=date&type=DESC&page=$1
+
+RewriteRule ^mail/outbox/?$ index.php?site=messenger&action=outgoing [L]
+
+RewriteRule ^mail/outbox/page/([0-9]+)/?$ index.php?site=messenger&action=outgoing&sort=date&type=DESC&page=$1
+
+RewriteRule ^mail/write/?$ index.php?site=messenger&action=newmessage [L]
+
+RewriteRule ^mail/write/to/([0-9]+)-([a-zA-Z0-9-_]+)/?$ index.php?site=messenger&action=touser&touser=$1
+
+RewriteRule ^mail/read/([0-9]+)/?$ index.php?site=messenger&action=show&id=$1 [L]
+
+RewriteRule ^mail/reply/([0-9]+)/?$ index.php?site=messenger&action=reply&id=$1 [L]
+
+
+
+# Links
+
+RewriteRule ^ads/out/([0-9]+)/?$ out.php?bannerID=$1 [L]
+
+
+
+# Results
+
+# RewriteRule ^results/?$ index.php?site=clanwars [L]
+
+# RewriteRule ^match/([0-9]+)/?$ index.php?site=clanwars_details&cwID=$1 [L]
+
+
+
+# About
+
+RewriteRule ^about/?$ index.php?site=about [L]
+
+
+
+# Teams
+
+RewriteRule ^teams/?$ index.php?site=squads [L]
+
+RewriteRule ^teams/([0-9]+)/?$ index.php?site=squads&action=show&squadID=$1 [L]
+
+
+
+# Sponsors
+
+RewriteRule ^sponsors/?$ index.php?site=sponsors [L]
+
+RewriteRule ^sponsor/out/([0-9]+)/?$  out.php?sponsorID=$1 [L]
+
+
+
+# Contact
+
+RewriteRule ^contact/?$ index.php?site=contact
+
+
+
+# Statics
+
+RewriteRule ^resources/?$ index.php?site=static&staticID=2 [L]
+
+
+
+# Streams
+
+RewriteRule ^streams/?$ index.php?site=streams [L]
+
+RewriteRule ^stream/([0-9]+)/?$ index.php?site=streams&streamID=$1 [L]
+
+
+
+# Videos
+
+RewriteRule ^videos/?$ index.php?site=videos [L]
+
+RewriteRule ^video/([0-9]+)/?$ index.php?site=videos&videoID=$1 [L]
+
+
+
+# Scene
+
+RewriteRule ^scene/?$ index.php?site=news&category=scene [L]
+
+RewriteRule ^scene/archive/?$ index.php?site=news&action=archive&category=blogs [L]
+
+RewriteRule ^scene/archive/page/([0-9]+)/?$ index.php?site=news&action=archive&category=scene&page=$1 [L]
+
+RewriteRule ^scene/([0-9]+)/?$ index.php?site=news_comments&newsID=$1&category=scene [L]
+
+RewriteRule ^scene/([0-9]+)/page/([0-9]+)/?$ index.php?site=news_comments&newsID=$1&sorttype=ASC&commentspage=$2 [L]
+
+
+
+# Closed (pages)
+
+RewriteRule ^files/?$ index.php?site=closedpage [L]
+
+RewriteRule ^awards/?$ index.php?site=closedpage [L]
+
+RewriteRule ^match/([0-9]+)/?$ index.php?site=closedpage [L]
+
+
+
+# Special
+
+RewriteRule ^special/([0-9]+)/?$ out.php?partnerID=$1 [L]

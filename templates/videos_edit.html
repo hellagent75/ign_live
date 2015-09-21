@@ -1,0 +1,12 @@
+<div style="width:650px; float:left;">
+<form action="index.php?site=videos&action=saveedit" method="post" name="saveedit"enctype="multipart/form-data">
+<table width="100%">
+	<tr><h2 colspan="2">Video bearbeiten</h2></tr>
+    <tr><td>Title:</td><td><input type="text" name="name" value="$ds[vidheadline]"></td></tr>
+    <tr><td>Category:</td><td><select name="rubric">$rubriken</select></td></tr>
+    <tr><td>Video-Portal:</td><td><select name="portal">$ports</select></td></tr>
+    <tr><td>Discription:</td><td><textarea name="description" cols="60" rows="7">$ds[viddescription]</textarea></td></tr>
+    <tr><td>Video-ID:</td><td><input type="text" name="clip" value="$ds[vidclip]" size="62"></td></tr>
+    <tr><td><input type="submit" value="save" name="saveedit"></td><td><input type="hidden" value="$id" name="id" /></td></tr>
+</table>
+</form></div>

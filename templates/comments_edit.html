@@ -1,0 +1,27 @@
+<script language="JavaScript" type="text/javascript">
+<!--
+function chkFormular() {
+	if(document.getElementById('message').value == "") {
+		alert('%enter_message%');
+		document.getElementById('message').focus();
+   		return false;
+	}
+	if(!validbbcode(document.getElementById('message').value)){
+		return false;
+	}
+	
+}
+-->
+</script>
+
+<form id="post" name="post" action="comments.php" method="post" onsubmit="return chkFormular()">
+<div class="comment-add">
+  <h2 style="background:url(./sm/core/h2_clear.png);">Edit Comment</h2>
+  <textarea name="message" id="message" rows="6" cols="50" style="width:97%; max-width: 97%;">$message</textarea><br /><br />
+  <input type="hidden" name="authorID" value="$ds[userID]" />
+  <input type="hidden" name="commentID" value="$id" />
+  <input type="hidden" name="referer" value="$referer" />
+  <input type="hidden" name="userID" value="$userID" />
+  <input type="submit" name="saveeditcomment" value="%edit_comment%" />
+</div>
+</form>

@@ -1,0 +1,26 @@
+<script language="JavaScript" type="text/javascript">
+<!--
+function chkFormular() {
+	if(document.getElementById('message').value == "") {
+		alert("%yht_enter_message%");
+		document.getElementById('message').focus();
+   		return false;
+	}
+	if(!validbbcode(document.getElementById('message').value)){
+		return false;
+	}
+	
+}
+-->
+</script>
+<div class="profile-guestbook-newcomment">
+<form id="post" name="post" method="post" action="index.php?site=profile&amp;action=guestbook&amp;id=$id" onsubmit="return chkFormular()">
+<b style="color: #F26722;">Add your comment!</b><br /><br />
+<textarea name="message" id="message" rows="5" style="width:272px; max-width:272px; margin: 0px 0px 5px 0px;"></textarea></td>
+<input type="hidden" name="gbname" value="$name" />
+<input type="hidden" name="gbemail" value="$email" />
+<input type="hidden" name="gburl" value="$url" /> 
+<input type="hidden" name="icq" value="$icq" />
+<input name="save" type="submit" value="%submit%" />
+</form>
+</div>

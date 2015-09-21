@@ -1,0 +1,29 @@
+<script language="JavaScript" type="text/javascript">
+<!--
+var comment_submit = false;
+function chkFormular() {
+	if(document.getElementById('message').value == "") {
+		alert('%enter_message%');
+		document.getElementById('message').focus();
+   		return false;
+	}
+	if(!validbbcode(document.getElementById('message').value)){
+		return false;
+	}
+	if(comment_submit == true){
+		return false;
+	}
+	comment_submit = true;	
+}
+-->
+</script>
+<form id="post" name="post" action="comments.php" method="post" onsubmit="return chkFormular()">
+  <h2>Add Comment:</h2>
+  <textarea name="message" id="message" class="comments_area"></textarea>
+  <input type="hidden" name="userID" value="$userID" />
+  <input type="hidden" name="referer" value="$referer" />
+  <input type="hidden" name="parentID" value="$parentID" />
+  <input type="hidden" name="type" value="$type" />
+  <input style="float:right;" type="submit" name="saveusercomment" value="%post_comment%"/>
+
+</form>

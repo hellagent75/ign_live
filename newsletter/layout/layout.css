@@ -1,0 +1,22 @@
+/*
+	Phantoms-esports.com (c) Copyright 2012
+	Author: Tiago Ferreira - www.tiagof.com
+*/
+
+/* Imports */
+* { margin: 0px; padding: 0px; border:0px; outline: 0px; }
+html, body { background: url(../gfx/body-bg.jpg) top center no-repeat; background-color: #0D0E10; font-family: Tahoma, Geneva, sans-serif; font-size: 12px; color: #fff; }
+
+/* Links */
+a, a:link, a:visited { color: #fff; text-decoration: none; font-family: Tahoma, Geneva, sans-serif; -webkit-transition: all 0.3s ease-in ; -moz-transition: all 0.3s ease-in ; -ms-transition: all 0.3s ease-in ; -o-transition: all 0.3s ease-in ; transition: all 0.3s ease-in ; }
+a:hover { color: #f26722; }
+
+#wrapper { width: 582px; margin: auto; }
+#header { width: 582px; padding: 25px 0px 25px 0px; float: left; }
+#header a { background: url(../gfx/header-logo.png); width: 240px; height: 161px; float: left; }
+#header span { font-size: 30px; color: #ff6600; font-weight: bold; margin: 50px 60px 0; text-align: center; text-transform: uppercase; float: right; }
+#header span p { font-size: 12px; color: #999; }
+#newsletter { background: #131313; border: 1px #272727 solid; border-radius: 3px; width: 560px; padding: 10px; float: left; }
+#inner { background: #181818; width: 540px; padding: 10px; text-align: justify; float: left; }
+#inner h1 { color: #ff6600; font-size: 14px; }
+#footer { width: 582px; text-align: center; padding: 15px 0px 15px 0px; color: #999; float: left; }

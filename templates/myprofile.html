@@ -1,0 +1,154 @@
+<script language="JavaScript" type="text/javascript">
+function chkFormular() {
+	if(document.getElementById('nickname').value == "") {
+		alert("%you_have_to_nickname%");
+		document.getElementById('nickname').focus();
+   		return false;
+	}
+	if(document.getElementById('usernamenew').value == "") {
+		alert("%you_have_to_username%");
+		document.getElementById('usernamenew').focus();
+   		return false;
+	}
+	if(document.getElementById('firstname').value == "") {
+		alert("%you_have_to_firstname%");
+		document.getElementById('firstname').focus();
+		return false;
+	}
+	if(document.getElementById('b_day').value < 1 || document.getElementById('b_day').value > 31) {
+		alert("%you_have_to_bday%");
+		document.getElementById('b_day').focus();
+		return false;
+	}
+	if(document.getElementById('b_month').value < 1 || document.getElementById('b_month').value > 12) {
+		alert("%you_have_to_bday%");
+		document.getElementById('b_month').focus();
+		return false;
+	}
+	if(document.getElementById('b_year').value < 1900 || document.getElementById('b_year').value > 2050) {
+		alert("%you_have_to_bday%");
+		document.getElementById('b_year').focus();
+		return false;
+	}
+}
+</script>
+$showerror
+
+<ul class="idTabs">
+    <li><a class="current" href="#tab1">Edit Profile</a></li>
+    <li><a href="#tab2">Edit Password</a></li>
+    <li><a href="#tab3">Edit Email</a></li>
+</ul>
+ 
+<div id="tab1" class="profile_content">
+	
+	<div class="profile_header">My Details<br/><small>This is your personal info, It will be displayed in your profile.</small></div>
+    <form method="post" action="settings/" enctype="multipart/form-data" onsubmit="return chkFormular()">
+    <ul>
+        <li>
+        * Username<br />
+        <input type="hidden" name="nickname" id="nickname" value="$nickname" maxlength="30" size="27" />
+        <input type="hidden" name="usernamenew" id="usernamenew" value="$username" maxlength="30" size="27" />
+        <input type="text" value="$username" maxlength="30" size="27" disabled="disabled" />
+        <span class="tooltip" style="color:#758785;"><b>Contact an Admin to edit your username</b></span>
+        </li>
+        <li>* First Name<br /><input type="text" name="firstname" id="firstname" value="$firstname" size="27" /></li>
+        <li>* Last Name<br /><input type="text" name="lastname" value="$lastname" size="27" /></li>
+        <li>
+          * Date of Birth <font style="color: #999; font-size: 10px;">(day-month-year)</font><br />
+          <input type="text" name="b_day" id="b_day" value="$b_day" size="2" style="margin:0px 5px 0px 0px;" />
+          <input type="text" name="b_month" id="b_month" value="$b_month" size="2" style="margin:0px 5px 0px 0px;" />
+          <input type="text" name="b_year" id="b_year" value="$b_year" size="5" />
+        </li>
+        <li>Website<br /><input type="text" name="homepage" value="$homepage" size="27" maxlength="255" /></li>
+        <li>* City<br /><input type="text" name="town" size="27" value="$town" /></li>
+        <li>* Country<br /><select name="flag" onchange="document.getElementById('county').src='images/flags/'+this.options[this.selectedIndex].value+'.gif'">$countries</select> $country</li>
+        <li>* Gender<br /><select name="sex">$sex</select></li>
+    </ul>
+          
+	<div class="profile_header">About<br/><small>A short presentation about yourself</small></div>
+	<textarea name="messageabout" rows="8" style="width:630px; max-width:630px; margin:10px 0 10px 0; float:left;">$about</textarea>
+
+	<div class="profile_header">AVATARS<br/><small>Your userpic and comment/forum picture</small></div>
+
+    <div style="margin:30px 0 0 130px; float:left;">
+    
+    	<div style="margin:0px 0px 30px 0px; float:left;">
+            $viewpic
+            <input name="userpic" type="file" style="width:200px; float: left;" />
+            <label style="cursor: pointer; margin:10px 0px 0px 10px; float:left;"><input class="input" name="deluserpic" type="checkbox" value="1" /> Delete</label><br /><br /><br />
+            Profile picture: 280x280px
+    	</div>
+        
+        <div style="margin:0px 0px 30px 0px; float:left;">
+            $viewavatar
+            <input name="avatar" type="file" style="width:200px; float:left;" />
+            <label style="cursor: pointer; margin:10px 0px 0px 10px; float:left;"><input class="input" name="delavatar" type="checkbox" value="1" /> Delete</label><br /><br/><br/>
+            Avatar picture: 100x100px
+        </div>
+    
+        <div style="margin:0px 0px 30px 0px; float: left;">
+            $viewuserbanner
+            <input name="userbanner" type="file" style="width:200px; float:left;" />
+            <label style="cursor: pointer; margin:10px 0px 0px 10px; float:left;"><input class="input" name="deluserbanner" type="checkbox" value="1" /> Delete</label><br /><br /><br/>
+            Banner picture: 1000x300px
+        </div>
+        
+    </div>
+    
+    <div class="profile_header">Social<br/><small>Your social links</small></div>
+
+    <ul>
+    <li>Twitter<small>*ID only</small><br /><input type="text" name="mainboard" value="$mainboard" size="27" /></li>
+    <li>Steam Community <small>*ID only</small><br /><input type="text" name="clanhp" value="$clanhp" size="27" /></li>
+    <li>Facebook<br /><input type="text" name="clanirc" value="$clanirc" size="27" /></li>
+    </ul>
+              
+<div class="profile_header">Hardware <br/><small>your System specs</small></div>
+
+    <ul>
+    <li>Cpu<br /><input type="text" name="cpu" value="$cpu" size="27" /></li>
+    <li>Memory<br /><input type="text" name="ram" value="$ram" size="27" /></li>
+    <li>Graphic Card<br /><input type="text" name="graphiccard" value="$graphiccard" size="27" /></li>
+    <li>Monitor<br /><input type="text" name="monitor" value="$monitor" size="27" /></li>
+    </ul>
+    
+
+<div class="profile_header">Peripherals<br/><small>Your Equipment Used</small></div>
+
+    <ul>
+    <li>Mouse<br /><input type="text" name="mouse" value="$mouse" size="27" /></li>
+    <li>Mousepad<br /><input type="text" name="mousepad" value="$mousepad" size="27" /></li>
+    <li>Headset<br /><input type="text" name="soundcard" value="$soundcard" size="27" /></li>
+    <li>Keyboard<br /><input type="text" name="keyboard" value="$keyboard" size="27" /></li>
+    </ul>
+    <input type="submit" name="submit" value="Update Profile" /><font style="color:#999; margin:0px 0px 0px 10px;">Fields with * are required!</font>
+    </form>
+    
+</div>
+
+<div id="tab2" class="profile_content">
+    <div class="profile_header">Edit Password <br/><small>Use this form to change your password</small></div>
+    <form method="post" action="settings/">
+    <ul>
+        <li>Old Password<br /><input type="password" name="oldpwd" size="27" /></li>
+        <li>New Password<br /><input type="password" name="pwd1" size="27" /></li>
+        <li>Repeat New Password<br /><input type="password" name="pwd2" size="27" /></li>
+        <li><input type="hidden" name="id" value="$userID" /><br/>
+        <input type="submit" name="savepwd" value="Change Password" /></li>
+    </ul>
+    </form>
+</div>
+
+<div id="tab3" class="profile_content">
+    <div class="profile_header">Edit Email <br/><small>Use this form to update your current email <font style="color:#999;">[$email]</font></small></div>
+    <form method="post" action="settings/">
+    <ul>
+        <li>New Email<br /><input type="text" name="mail1" size="27"/></li>
+        <li>Repeat New Email<br /><input type="text" name="mail2" size="27"/></li>
+        <li>Password<br /><input type="password" name="oldpwd" size="27"/></li>
+        <li><input type="hidden" name="userid" value="$userID" />
+        <br/><input type="submit" name="savemail" value="Change Email" /></li>
+    </ul>
+    </form>
+</div>
